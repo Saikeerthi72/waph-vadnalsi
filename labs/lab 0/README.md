@@ -12,7 +12,7 @@
 
 <br>
 
-![Sai Keerthi vadnala headshot](Images/headshot.jpg)
+![Sai Keerthi vadnala headshot](Images/headshot.JPG)
 
 ## Repository Information
 
