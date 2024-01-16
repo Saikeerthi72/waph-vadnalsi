@@ -51,4 +51,8 @@ This is a private repository for Sai Keerthi Vadnala to store all code from the 
 - I have cloned the remote repository into my VM using command: git clone git@github.com:Saikeerthi72/waph-vadnalsi.git
 - I have created a labs folder inside the waph-vadnalsi (local repository) and has copied the contents of README-template.MD from waph folder to README.MD file of waph-vadnalsi
 
+<br>
+
+![ss3](Images/ss3.png)
+
 
