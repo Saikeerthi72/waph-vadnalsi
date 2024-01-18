@@ -24,7 +24,7 @@ This is a private repository for Sai Keerthi Vadnala to store all code from the 
 
 [Hands-on exercises in lectures](labs) 
 
-  - [Lab 0](labs/lab0): Development Environment Setup 
+  - [Lab 0](https://github.com/Saikeerthi72/waph-vadnalsi/tree/main/labs/lab%200): Development Environment Setup 
 ## Part I - Ubuntu Virtual machine & Software Installation
 - Firstly I have used "sudo apt net-tools" command. This command helps in administering and troubleshooting network issues. 
 - Next I have installed apache web server, git, and sublime text using following commands respectively, "sudo apt install apache2", "sudo apt install git", "sudo snap install sublime-text --classic".
