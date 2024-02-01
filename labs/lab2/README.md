@@ -161,21 +161,15 @@ This is a private repository for Sai Keerthi Vadnala to store all code from the 
 - And also applied background color to the body as powder blue and h1 tag to color: blue (fig )
 <br>
 
-![Internal CSS](images/T2-B.CSS1.png.png)
+![Internal CSS](images/T2-B.CSS1.png)
 
  **C.jQuery**
 
-- jQuery is a popular javascript library that provides easy way to access APIs and working on it. Particularly it can simplify the complex tasks.
-- I copied the jquery script code into the head section. It is required for the jquery to run
-- **i.jQuery $.get():** 
-- First a new button is added at the bottom to call the function jQueryAjax() when it is clicked
-- A new function jQueryAjax() is created for an ajax get request and it will prints the response back
-- Data which we entered is fetched in a variable. A general test is performed whether the data is empty or not by length function
-- Next, jQuery selector gets the echo.php file and it reads the input from the container and print back the response by selecting #response id
-
-
 - jQuery is a popular JavaScript library, which streamlines API interactions and simplifies tasks efficiently.
 - I have copied the jQuery script into the head section, essential for enabling jQuery functionality.
+
+- **i.jQuery $.get():** 
+
 - I have also introduced a new button which triggers the jQueryAjax() function upon clicking for a Ajax GET request.
 - The jQueryAjax() function fetches entered data, and ensures that it is not empty using the length function.
 - It utilizes a jQuery selector to access echo.php, reads input from the container, and prints back the response on the page using the #response id.
@@ -197,49 +191,3 @@ This is a private repository for Sai Keerthi Vadnala to store all code from the 
   ![jQuery - output](images/T2-C-OUTPUT.png)
 
 =---------------------------------------------------
-
- - **D. Web API integration**
- 
- - We can integrate any free APIs inside our html page using jQuery.
- - **i.Ajax on API:** The idea of this is to integrate a joke api by sending a request and to display the response of a random joke
- - A ajax request code is written in an old script tag
- - $.get()fetches the api for the response and JSON is used for formatting the response data
- - There is no button created for handling the joke. Therefore this request will execute everytime when the page is reloaded. 
- - code and output (fig 18):<br>
- 
- ![Joke API](images/api1.png)
- 
- - After refreshing a browser, I have inspected the network window
- - Everytime, when a browser is reloaded a random joke is fetched and printed in the console window as API code
- - In request windows, status is showing as 200 ok and in the response tab, it is displaying the api code which is fetched (fig 19)<br>
- 
- ![Joke API Network window](images/networkapi.png)
- 
- -**ii.Using fetch api:** 
- 
- - Guessing the age based on name is an another api I have fetched in this sub task
- - I have created a input button guess age to execute an api when the button is clicked
- - Next I have created a async function guessAge
- - I used fetch() which is a javascript method for fetching results across the network
- - It will return a promise
- - Now the api will respond and code will handle the response 
- - Code and output: (fig 20)<br>
- 
- ![Name API](images/api2.png)
- 
- - Next, I have inspected the network windows for the response 
- - It shows 200 ok and in response window it fetches the output in an api code (fig 21) <br>
- 
- ![Name API Network window](images/networkapi2.png)
- 
- 
-
-
-
-
-
-
-
-
-
-
