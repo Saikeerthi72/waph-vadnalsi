@@ -12,7 +12,7 @@
 
 <br>
 
-![Sai Keerthi vadnala headshot](Images/headshot.jpg)
+![Sai Keerthi vadnala headshot](images/headshot1.jpg)
 
 
 ## Lab Overview
