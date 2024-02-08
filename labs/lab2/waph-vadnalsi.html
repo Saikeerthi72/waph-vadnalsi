@@ -69,9 +69,10 @@
 			function getEcho()
 			{
 				var input = document.getElementById("data").value;
-				if(input.length == 0)
-				return;
-
+				if (input.trim() === "") {
+                        			alert("Input cannot be empty");
+                        		return;
+                    			}
 			var xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = function()
 			{
@@ -88,9 +89,11 @@
 
 			function jQueryAjax() {
 				var input = $("#data").val();
-				if (input.length == 0) return;
-				$.get("echo.php?data="+input,
-					function(result) {
+				if (input.trim() === "") {
+                	alert("Input cannot be empty"); 
+					return;
+				}
+				$.get("echo.php?data="+ encodeURIComponent(input), function(result)  {
 						$("#response").html("Response from server:" + result);
 					}
 				);
@@ -99,7 +102,10 @@
 
 			function jQueryAjaxPost() {
 				var input = $("#data").val();
-				if (input.length == 0) return;
+				if (input.trim() === "") {
+					alert("Input cannot be empty");
+					return;
+				}
 				$.post("echo.php", {data: input},
 					function(result) {
 						$("#response").html("Response from server:" + result);
@@ -122,6 +128,16 @@
 
 			}
 
+	function validatePostForm() {
+            var input = document.getElementById("postDataInput").value;
+            console.log(value);
+            if (input.trim() === "") {
+                alert("Input cannot be empty");
+                return false;
+            }
+            return true;
+           }
+		
 		
 		</script>
 	</div>
@@ -142,8 +158,8 @@
 	</div>
 		<i>Form with a HTTP POST Request</i>
 
-		<form action="echo.php" method="POST">
-			Enter your input: <input name="data">
+		<form action="echo.php" method="POST" name="echo_post">
+			Enter your input: <input name="data" onsubmit="return validatePostForm()" id="postDataInput">
 			<input type="submit" value="Submit">
 		</form>
 		<div>
