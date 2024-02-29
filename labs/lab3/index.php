@@ -1,6 +1,7 @@
 <?php
 	session_start();    
 	if (checklogin_mysql($_POST["username"],$_POST["password"])) {
+		$username = htmlspecialchars($_POST['username']);
 ?>
 	<h2> Welcome <?php echo $_POST['username']; ?> !</h2>
 <?php		
@@ -11,6 +12,7 @@
 	function checklogin($username, $password) {
 		$account = array("admin","1234");
 		if (($username== $account[0]) and ($password == $account[1])) 
+
 		  return TRUE;
 		else 
 		  return FALSE;
@@ -21,12 +23,14 @@
 			printf("Database connection failed: %s\n", $mysqli->connect_error);
 			exit();
 	    }
-	    $sql = "SELECT * FROM users WHERE username='" . $username . "' ";
-	    $sql = $sql . " AND password = md5('" . $password . "')";
+	    $sql = "SELECT * FROM users WHERE username=? AND password=MD5(?);";
+	    $stmt = $mysqli->prepare($sql);
+	    $stmt->bind_param("ss", $username, $password);
+	    $stmt->execute();
 	    //echo "DEBUG>sql = $sql"; //return TRUE;
-	    $result = $mysqli->query($sql);
+	    $result = $stmt->get_result();
 	    if($result->num_rows ==1)
 	    	return TRUE;
-	    return False;
+	    return FALSE;
 	}
 ?>
